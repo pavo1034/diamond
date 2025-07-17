@@ -65,7 +65,7 @@ export const DiamondForm = ({ diamondId,setDiamondId }) => {
       return `${numbers}${letters}`;
     };
     setValue("stockNo", generateStockNo());
-  }, [setValue]);
+  }, [setValue,diamondId]);
 
   useEffect(() => {
     const validInputs =
@@ -83,7 +83,7 @@ export const DiamondForm = ({ diamondId,setDiamondId }) => {
     <div className="p-5">
       <h1 className="font-bold text-[20px]">Diamond Details</h1>
       <form className="flex flex-col gap-4" onSubmit={handleSubmit(formSubmit)}>
-        <div className="flex justify-between">
+        <div className="flex justify-between gap-3">
           <div>
             <label htmlFor="">Stock No</label>
             <div>
@@ -148,8 +148,8 @@ export const DiamondForm = ({ diamondId,setDiamondId }) => {
           </div>
           <div className="text-red-400">{errors.clarity?.message}</div>
         </div>
-        <div className="flex justify-between items-end gap-3">
-          <div className="flex justify-between ">
+        <div className="flex justify-between  items-end gap-6">
+          <div className="flex justify-between  gap-4">
             <div>
               <label htmlFor="">RAP price</label>
               <div>

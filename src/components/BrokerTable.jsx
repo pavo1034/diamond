@@ -16,7 +16,8 @@ export const BrokerTable = ({setBrokerId}) => {
   }
   return (
     <div class="overflow-x-auto mt-16">
-      <table class="min-w-full table-auto bg-white">
+      {console.log("brokers.lenght",brokers.lenght)}
+     {brokers.length >0 && <table class="min-w-full table-auto bg-white">
         <thead class=" text-blue-400 border-1 border-gray-400">
           <tr>
             <th class="px-4 py-2">Name</th>
@@ -48,7 +49,7 @@ export const BrokerTable = ({setBrokerId}) => {
             </tr>
           ))}
         </tbody>
-      </table>
+      </table>}
     </div>
   );
 };

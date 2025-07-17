@@ -17,7 +17,7 @@ export const DiamondTable = ({setDiamondId}) => {
 
   return (
     <div className="overflow-x-auto mt-16">
-      <table className="min-w-full table-auto bg-white">
+     {diamonds.length>0 && <table className="min-w-full table-auto bg-white">
         <thead className=" text-blue-400 border-1 border-gray-400">
           <tr>
             <th className="px-4 py-2">Stock No</th>
@@ -57,7 +57,7 @@ export const DiamondTable = ({setDiamondId}) => {
             </tr>
           ))}
         </tbody>
-      </table>
+      </table>}
     </div>
   )
 }
